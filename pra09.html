@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Webpage</title>
+    <style>
+        /* ----------------------------------
+           MOBILE-FIRST STYLES
+           (Default styles for small screens)
+           ---------------------------------- */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            padding: 1rem;            /* flexible */
+            text-align: center;
+            color: white;
+        }
+
+        .container {
+            padding: 1rem;
+        }
+
+        .box {
+            background-color: lightblue;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            font-size: 1rem;
+        }
+
+        /* Boxes stack on mobile */
+        .flex-box {
+            display: block;
+        }
+
+        /* ----------------------------------
+           MEDIA QUERY FOR TABLET
+           (Screens wider than 600px)
+           ---------------------------------- */
+        @media (min-width: 600px) {
+            .flex-box {
+                display: flex;
+                gap: 1rem;
+            }
+
+            .box {
+                flex: 1;
+                font-size: 1.1rem;
+            }
+        }
+
+        /* ----------------------------------
+           MEDIA QUERY FOR DESKTOP
+           (Screens wider than 900px)
+           ---------------------------------- */
+        @media (min-width: 900px) {
+            header {
+                font-size: 2rem;
+                padding: 2rem;
+            }
+
+            .container {
+                width: 80vw;       /* flexible width */
+                margin: auto;
+            }
+
+            .box {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        Responsive Webpage (Mobile First)
+    </header>
+
+    <div class="container">
+
+        <div class="flex-box">
+            <div class="box">Box 1: This layout stacks on mobile and becomes side-by-side on larger screens.</div>
+            <div class="box">Box 2: Flexible units like rem and vw make the design smooth.</div>
+        </div>
+
+        <div class="box">
+            Resize the screen to see the responsive effect using media queries.
+        </div>
+
+    </div>
+
+</body>
+</html>

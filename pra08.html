@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Selectors Example</title>
+    <style>
+        /* 1. UNIVERSAL SELECTOR */
+        * {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 2. ID SELECTOR (#) */
+        #main-heading {
+            color: darkblue;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* 3. CLASS SELECTOR (.) */
+        .highlight {
+            color: white;
+            background-color: green;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        /* 4. DESCENDANT SELECTOR (element inside another) */
+        div p {
+            color: brown;
+            font-size: 18px;
+        }
+
+        /* 5. GROUP SELECTOR (apply same style to multiple elements) */
+        h2, h3 {
+            color: purple;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="main-heading">CSS Selectors Demo</h1>
+
+    <h2>Group Selector Style Applied Here</h2>
+    <h3>Group Selector Applied Here Too</h3>
+
+    <div>
+        <p>This paragraph is styled using a <b>descendant selector (div p)</b>.</p>
+    </div>
+
+    <p class="highlight">This paragraph uses a <b>class selector</b> called "highlight".</p>
+
+</body>
+</html>
